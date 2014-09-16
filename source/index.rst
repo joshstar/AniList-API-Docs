@@ -9,6 +9,7 @@ AniList API documentation
 Welcome to the AniList API documentation
 
 Contents:
+
 .. toctree::
    :maxdepth: 2
 
