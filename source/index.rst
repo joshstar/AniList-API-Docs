@@ -6,10 +6,16 @@
 AniList API documentation
 ============================================
 
-Welcome to the AniList API documentation
+Welcome to the `AniList.co`_ JSON API documentation.
 
+For any questions, feature requests or issues with our API, or API documentation please use our `GitHub Issue tracker`_, not the AniList forums.
+
+.. _AniList.co: http://anilist.co
+.. _GitHub Issue tracker: https://github.com/Josh-Star/AniList-API-Docs/issues
+
+==================
 Contents:
-
+==================
 .. toctree::
    :maxdepth: 2
 
