@@ -27,7 +27,6 @@ Request authorization code:
   Url Parms:
   grant_type    : "authorization_code"
   client_id     :  Client id
-  client_secret :  Client secret
   redirect_uri  :  Client redirect uri
   response_type : "code"
 

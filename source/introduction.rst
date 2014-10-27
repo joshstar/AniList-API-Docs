@@ -16,13 +16,13 @@ Introduction
     - \'Hoarding\' or mass collection of data from the AniList API is strictly prohibited.
 
     If you would like to use the AniList API in a commercial client (this includes ads and in-app purchases)
-    just drop me an email joshstar [a-t] mail [do-t] com and I'll get back to eventually.
+    just drop me an email joshstar [a-t] mail [do-t] com and I'll get back to you eventually.
     With the current usage of the API it's rather unlikely any kind of profit cut etc will be necessary.
 
     Note: this summary is **NOT** in any way at all a substitute or a guarantee of what our terms of service state.
 
 **Adult content and application stores**
-    We feel we should mention many app-stores like the Apple app store prohibited 18+ content.
+    We feel we should mention many app-stores like the Apple app store prohibit 18+ content.
     If you're thinking about providing your client via a third-party service you should check their official state on the matter.
     Where we can, we provide an adult boolean in anime/manga API data, however we can not 100% ensure that this will always be accurate
     or that our definition of 'adult' content meets the same standards of other services.
