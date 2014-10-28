@@ -29,6 +29,7 @@ Contents:
    staff
    studio
    forum
+   markdown
 
 
 

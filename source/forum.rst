@@ -317,3 +317,8 @@ Remove comment [DELETE]
 ==================================
 Search
 ==================================
+Url
+::
+  GET: forum/search/{query}
+
+Returns search feed threads.
