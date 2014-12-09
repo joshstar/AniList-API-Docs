@@ -8,9 +8,6 @@ Introduction
     If a client requests a HTTP url they will **not** be redirected to the HTTPS variant.
 
 **API Terms of use**
-    by creating an AniList account you have already read and agreed to our developer terms of use.
-    Heres a quick summary of some of parts of the terms of use relevant to our API:
-
     - Free for non-commercial use.
     - Using the AniList API as a backup or data storage service is strictly prohibited.
     - \'Hoarding\' or mass collection of data from the AniList API is strictly prohibited.
@@ -18,8 +15,6 @@ Introduction
     If you would like to use the AniList API in a commercial client (this includes ads and in-app purchases)
     just drop me an email joshstar [a-t] mail [do-t] com and I'll get back to you eventually.
     With the current usage of the API it's rather unlikely any kind of profit cut etc will be necessary.
-
-    Note: this summary is **NOT** in any way at all a substitute or a guarantee of what our terms of service state.
 
 **Adult content and application stores**
     We feel we should mention many app-stores like the Apple app store prohibit 18+ content.
@@ -37,7 +32,7 @@ Introduction
 Creating a client
 ==================================
 
-...
+Log into your AniList account (or create one if you haven't already) and go to `/developer <http://anilist.co/developer>`_. Click the plus in the top right and enter your client's information, once saved you will receive your client id and secret.
 
 
 ==================================
