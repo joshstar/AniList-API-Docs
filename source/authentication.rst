@@ -16,7 +16,7 @@ Both the current grant types have a client secret key, you are required to keep 
 Grant: Authorization Code
 ==================================
 
-The authorization code grant type allows the client access to add, edit and remove a resource owner's data on their behalf.
+The authorization code grant type allows the client access to view, add, edit and remove a resource owner's data on their behalf.
 To do this we require the permission from the resource owner themselves, this will provide us with an *authorization code*,
 which we can later exchange for the required *access token*.
 
@@ -57,8 +57,7 @@ Return example:
     refresh_token: "X2Bxj1KzjsoaD4FCj6A0MGFWdYlGgoc31L70eSAQ"
   }
 
-You can now access the resource server on the resource owner's behalf by including this access token as a "access_token" header or url parameter.
-However for security this access token will expire in 1 hour. We don't want the resource owner to re-accept the client every time the access token becomes invalid,
+For security this access token will expire in 1 hour. We don't want the resource owner to re-accept the client every time the access token becomes invalid,
 so we use the the *refresh token* to request a new one.
 
 Request access token via refresh token:
@@ -81,6 +80,16 @@ Return example:
     }
 
 Once again this access token will expire in 1 hour. Use the refresh token from before to repeat this step whenever necessary.
+
+
+Now to access the resource server on the resource owner's behalf, simply include the following header with all your requests
+::
+    Authorization: Bearer access_token
+
+Ensure your Content type header is set to URL encoded.
+::
+    Content-Type: application/x-www-form-urlencoded
+
 
 ==================================
 Grant: Client Credentials
