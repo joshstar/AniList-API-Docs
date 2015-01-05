@@ -5,9 +5,12 @@ Authentication
 Which Grant type to use?
 ==================================
 
-If you want to save, edit or remove (POST, PUT, DELETE) any AniList user (resource owner) data then you'll need to use the *authorization code* grant type.
-
 If you only require reading of AniList data, then use *client credentials* grant type.
+
+If you want to save, edit or remove (POST, PUT, DELETE) any AniList user (resource owner) data then you'll need to use the *authorization code* or *authorization pin* grant type.
+
+The *authorization code* and *authorization pin* grant types are very similar. The only main difference being the *authorization code* grant will redirect the user to a redirect uri with the authorization code,
+while the *authorization pin* grant will display a pin that the user must copy and paste into the client.
 
 Both the current grant types have a client secret key, you are required to keep this **private**.
 
@@ -90,6 +93,81 @@ Ensure your Content type header is set to URL encoded.
 ::
     Content-Type: application/x-www-form-urlencoded
 
+==================================
+Grant: Authorization Pin
+==================================
+
+The authorization pin grant type allows the client access to view, add, edit and remove a resource owner's data on their behalf.
+To do this we require the permission from the resource owner themselves, this will provide us with an *authorization pin*,
+which we can later exchange for the required *access token*.
+
+Request authorization pin:
+::
+  GET: auth/authorize
+
+  Url Parms:
+  grant_type    : "authorization_pin"
+  client_id     :  Client id
+  response_type : "pin"
+
+This will direct the resource owner to a web page where they may choose to accept or deny the client.
+If the resource owner is not currently logged in, they will be redirected to the standard AniList login page, then redirect back to the client approval page once logged in.
+
+If the resource owner accepts the client, the authorization pin will be displayed for the user to copy and paste into the client.
+The client can then use this pin to request an access token.
+
+Request access token:
+::
+  POST: auth/access_token
+
+  Url Parms:
+  grant_type    : "authorization_pin"
+  client_id     :  Client id
+  client_secret :  Client secret
+  code          :  Authorization pin
+
+Return example:
+::
+  {
+    access_token: "ACXD3snrImEP5R6IHs6gGgqpnGgoZp54TDaWZkgc"
+    token_type: "bearer"
+    expires: 1414232110
+    expires_in: 3600
+    refresh_token: "X2Bxj1KzjsoaD4FCj6A0MGFWdYlGgoc31L70eSAQ"
+  }
+
+For security this access token will expire in 1 hour. We don't want the resource owner to re-accept the client every time the access token becomes invalid,
+so we use the the *refresh token* to request a new one.
+
+Request access token via refresh token:
+::
+  POST: auth/access_token
+
+  Url Parms:
+  grant_type    : "refresh_token"
+  client_id     :  Client id
+  client_secret :  Client secret
+  refresh_token :  Refresh Token
+
+Return example:
+::
+    {
+        access_token: "n6c4Rk1lnTD3CY1lKfJVlRXvIGOH4yLhAVyf5Iz"
+        token_type: "bearer"
+        expires: 1414233512
+        expires_in: 3600
+    }
+
+Once again this access token will expire in 1 hour. Use the refresh token from before to repeat this step whenever necessary.
+
+
+Now to access the resource server on the resource owner's behalf, simply include the following header with all your requests
+::
+    Authorization: Bearer access_token
+
+Ensure your Content type header is set to URL encoded.
+::
+    Content-Type: application/x-www-form-urlencoded
 
 ==================================
 Grant: Client Credentials
