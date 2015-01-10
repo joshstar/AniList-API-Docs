@@ -60,6 +60,12 @@ Url
 
 Returns a user model.
 
+Current authenticated user
+::
+	GET: user
+
+Returns user model. Only available for *authorization code* or *authorization pin* grant types.
+
 ==================================
 Activity
 ==================================
@@ -160,11 +166,7 @@ Url:
 
 Returns anime list entry with small model anime, where the anime is currently airing and being currently watched by the user.
 
-*Note: Only available via authorization code grant.*
-
-==================================
-Reviews
-==================================
+*Note: Only available via authorization code/pin grant.*
 
 ==================================
 Search
