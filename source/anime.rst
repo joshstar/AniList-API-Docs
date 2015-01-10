@@ -116,8 +116,44 @@ Url
 * Value: Airing Time
 
 ==================================
-Reviews
+Browse
 ==================================
+Returns up to 30 small anime models.
+
+Recently added anime
+::
+	GET: anime/browse/recent
+
+Currently airing anime
+::
+	GET: anime/browse/airing
+
+Not yet aired anime
+::
+	GET: anime/browse/upcoming
+
+Anime by year
+::
+	GET: anime/browse/year/{year}
+
+Anime by season
+::
+	GET: anime/browse/year/{year}/{season}
+
+Year
+::
+	4 digit year. e.g. 2014
+Season
+::
+	"winter"
+	"spring"
+	"summer"
+	"fall"
+	"autumn"
+
+Pagination
+::
+	URL Param: ?page=1
 
 ==================================
 Favourite [POST]

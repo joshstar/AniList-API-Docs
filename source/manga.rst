@@ -95,8 +95,45 @@ Returns anime model with the following:
 	Small model staff
 
 ==================================
-Reviews
+Browse
 ==================================
+Returns up to 30 small manga models.
+
+Pagination
+::
+	URL Param: ?page=1
+
+Recently added manga
+::
+	GET: manga/browse/recent
+
+Currently publishing manga
+::
+	GET: manga/browse/publishing
+
+Not yet published manga
+::
+	GET: manga/browse/upcoming
+
+Manga by year
+::
+	GET: manga/browse/year/{year}
+
+Year
+::
+	4 digit year. e.g. 2014
+Season
+::
+	"winter"
+	"spring"
+	"summer"
+	"fall"
+	"autumn"
+
+Pagination
+::
+	URL Param: ?page=1
+
 
 ==================================
 Favourite [POST]
