@@ -91,17 +91,54 @@ Returns the activity of the current user and the users they are following.
 Create activity [POST]
 ==================================
 
+**Activity status**
+::
+	POST: user/activity
+
+Payload
+::
+	text: (string) activity text
+
+
+**Activity message**
+::
+	POST: user/activity
+
+Payload
+::
+	text: (string) activity text
+	messenger_id: (int) recipient user id
+
+
+**Activity reply**
+::
+	POST: user/activity
+
+Payload
+::
+	text: (string) activity text
+	reply_id: (int) activity id
+
+
 ==================================
 Remove activity [DELETE]
 ==================================
 
-==================================
-Create activity reply [POST]
-==================================
+**Remove activity**
+::
+	DELETE: user/activity
 
-==================================
-Remove activity reply [DELETE]
-==================================
+Payload
+::
+	id: (int) activity id
+
+**Remove activity reply**
+::
+	DELETE: user/activity/reply
+
+Payload
+::
+	id: (int) activity reply id
 
 ==================================
 Notifications
@@ -111,7 +148,7 @@ Url
   GET: user/notifications
 
 Returns up to 10 notifications of the current user.
-  
+
 
 **Count**
 ::
