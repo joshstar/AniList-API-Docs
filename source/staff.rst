@@ -58,6 +58,15 @@ Returns staff model with the following:
 Favourite [POST]
 ==================================
 
+Toggle favourite
+::
+	POST: actor/favourite
+	alt:  staff/favourite
+
+Payload
+::
+	id: (int) staff id
+
 ==================================
 Search
 ==================================

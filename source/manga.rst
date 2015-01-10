@@ -139,6 +139,14 @@ Pagination
 Favourite [POST]
 ==================================
 
+Toggle favourite
+::
+	POST: manga/favourite
+
+Payload
+::
+	id: (int) manga id
+
 ==================================
 Search
 ==================================

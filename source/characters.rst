@@ -55,6 +55,14 @@ Returns characters model with the following:
 Favourite [POST]
 ==================================
 
+Toggle favourite
+::
+	POST: character/favourite
+
+Payload
+::
+	id: (int) character id
+
 ==================================
 Search
 ==================================

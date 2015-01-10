@@ -159,6 +159,14 @@ Pagination
 Favourite [POST]
 ==================================
 
+Toggle favourite
+::
+	POST: anime/favourite
+
+Payload
+::
+	id: (int) anime id
+
 ==================================
 Search
 ==================================
