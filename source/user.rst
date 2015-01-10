@@ -131,6 +131,14 @@ Followers & Following
 Follow/Unfollow [POST]
 ==================================
 
+**Toggle follow**
+::
+	POST: user/follow
+
+Payload
+::
+	id: (int) user id
+
 ==================================
 Favourites
 ==================================
