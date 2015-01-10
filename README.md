@@ -5,12 +5,6 @@ Documentation of [AniList.co](http://anilist.co/) JSON API
 
 For any questions, feature requests or issues with our API, or API documentation please use our [GitHub Issue tracker](https://github.com/Josh-Star/AniList-API-Docs/issues), not the AniList forums.
 
-
-## Current state of API Docs
-
-I'm spending all my time currently fixing issues with the main AniList site, thus the docs still haven't been finished. Apologizes for this, feel free to ask any questions via the GitHub issues.
-
-
 ## API development state
 The AniList API is currently in a "development state",
 this means we will be making backwards compatible breaking changes to the API, with little to no notice.
