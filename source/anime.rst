@@ -52,6 +52,7 @@ Anime
 		"image_url_sml": "http://anilist.co/img/dir/anime/sml/1.jpg",
 		"title_japanese": "カウボーイビバップ",
 		"title_english": "Cowboy Bebop",
+		"synonyms": [],
 		"image_url_lge": "http://anilist.co/img/dir/anime/reg/1.jpg",
 		"airing_status": "finished airing",
 		"average_score": "86.8",

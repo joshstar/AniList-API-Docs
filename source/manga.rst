@@ -42,6 +42,7 @@ Manga
 		"type": "Manga",
 		"title_japanese": "新世紀エヴァンゲリオン",
 		"title_english": "Neon Genesis Evangelion",
+		"synonyms": [],
 		"image_url_lge": "http://anilist.co/img/dir/manga/reg/698.jpg",
 		"image_url_med": "http://anilist.co/img/dir/manga/med/698.jpg",
 		"publishing_status": "finished",
