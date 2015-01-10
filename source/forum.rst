@@ -126,7 +126,7 @@ Returns threads ordered by most recent creation.
 
 Returns threads the user has subscribed to, ordered by most recent activity or creation.
 
-*Note: Only available via authorization code grant.*
+*Note: Only available via authorization code/pin grant.*
 
 **Tags**
 ::
@@ -286,33 +286,89 @@ Included within "comments":
 Create thread [POST]
 ==================================
 
+Create thread
+::
+    POST: forum/thread
+
+Payload
+::
+    title       : (string) thread title
+    body        : (string) thread body
+    tags        : Comma separated tag ids
+    tags_anime  : Comma separated anime ids
+    tags_manga  : Comma separated manga ids
+
 ==================================
 Edit thread [PUT]
 ==================================
+
+Edit thread
+::
+    PUT: forum/thread
+
+Payload
+::
+    id          : (int) thread id
+    title       : (string) thread title
+    body        : (string) thread body
+    tags        : Comma separated tag ids
+    tags_anime  : Comma separated anime ids
+    tags_manga  : Comma separated manga ids
 
 ==================================
 Remove thread [DELETE]
 ==================================
 
+Remove thread
+::
+    DELETE: forum/thread/{thread_id}
+
 ==================================
 Thread subscribe [POST]
 ==================================
 
-==================================
-Comment
-==================================
+Toggle thread subscribe
+::
+    POST: forum/comment/subscribe
+
+Payload
+::
+    thread_id: (int) thread id
 
 ==================================
 Create comment [POST]
 ==================================
 
+Edit thread
+::
+    POST: forum/comment
+
+Payload
+::
+    thread_id  : (int) thread id
+    comment    : (string) comment text
+    reply_id   : (int) comment id (only when replying)
+
 ==================================
 Edit comment [PUT]
 ==================================
 
+Edit thread
+::
+    PUT: forum/comment
+
+Payload
+::
+    id      : (int) comment id
+    comment : (string) comment text
+
 ==================================
 Remove comment [DELETE]
 ==================================
+
+Remove thread
+::
+    DELETE: forum/comment/{comment_id}
 
 ==================================
 Search
