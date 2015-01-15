@@ -31,7 +31,7 @@ User
 			"",
 			""
 		],
-		"advanced_rating": 1,
+		"advanced_rating": true,
 		"advanced_rating_names": [
 			"Story",
 			" Characters",
