@@ -5,7 +5,7 @@ User Lists
 ::
 	0. 10 Point (0-10 int)
 	1. 100 Point (0-100 int)
-	2. 5 Star (1-5 " Star" String)
+	2. 5 Star (0-5 int)
 	3. 3 Smiles (":(",":|",":)" String)
 	4. 10 Point decimal (0.0 - 10.0 Float)
 
