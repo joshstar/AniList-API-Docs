@@ -37,9 +37,21 @@ Anime
 		"total_episodes": 26,
 		"youtube_id": null,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
 		"role": null,
-		"airing": null
+		"list_stats": {
+			"plan_to_watch": 1673,
+			"watching": 421,
+			"completed": 4855,
+			"on_hold": 511,
+			"dropped": 114
+		},
+		"airing": {
+			"time": "2015-04-12T00:00:00+09:00",
+			"countdown": 497524,
+			"next_episode": 2
+		}
 	}
 
 **Small Anime Model**
@@ -58,6 +70,7 @@ Anime
 		"average_score": "86.8",
 		"total_episodes": 26,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
 		"role": null
 	}

@@ -30,8 +30,16 @@ Manga
 		"total_chapters": 162,
 		"total_volumes": 18,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
-		"role": null
+		"role": null,
+		"list_stats": {
+			"plan_to_read": 1673,
+			"reading": 421,
+			"completed": 4855,
+			"on_hold": 511,
+			"dropped": 114
+		}
 	}
 
 **Small Manga Model**
@@ -50,6 +58,7 @@ Manga
 		"total_chapters": 95,
 		"total_volumes": 14,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
 		"role": null
 	}
