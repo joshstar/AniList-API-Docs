@@ -131,42 +131,32 @@ Url
 ==================================
 Browse
 ==================================
-Returns up to 30 small anime models.
+Returns up to 40 small anime models if paginating.
 
-Recently added anime
+Browse
 ::
-	GET: anime/browse/recent
+	Get: browse/anime
 
-Currently airing anime
-::
-	GET: anime/browse/airing
+	Url Parms:
+	year           : 4 digit year e.g. "2014"
+	season         : "winter" || "spring" || "summer" || "fall"
+	type           : "Tv"  || "Movie"  || "Special"  || "OVA"  || "ONA"  || "Tv Short"
+	status         : "Not Yet Aired" || "Currently Airing" || "Finished Airing" || "Cancelled"
+	genres         : Comma separated genre strings. e.g. "Action,Comedy" Returns anime that have ALL the genres.
+	genres_exclude : Comma separated genre strings. e.g. "Drama" Excludes returning anime that have ANY of the genres.
+	sort           : "id" || "score" || "popularity" || "start date" || "end date" Sorts results, default ascending order. Append "-desc" for descending order e.g. "id-desc"
+	airing_data    : "airing_data=true" Includes anime airing data in small models
+	full_page      : "full_page=true" Returns all available results. Ignores pages. Only available when status="Currently Airing" or season is included
+	page           : int
 
-Not yet aired anime
-::
-	GET: anime/browse/upcoming
 
-Anime by year
+Genre List
 ::
-	GET: anime/browse/year/{year}
+	GET: genre_list
 
-Anime by season
-::
-	GET: anime/browse/year/{year}/{season}
+List of genres for use with browse queries
 
-Year
-::
-	4 digit year. e.g. 2014
-Season
-::
-	"winter"
-	"spring"
-	"summer"
-	"fall"
-	"autumn"
-
-Pagination
-::
-	URL Param: ?page=1
+*The old browse API endpoints will continue to be supported until the next major API version update*
 
 ==================================
 Favourite [POST]
