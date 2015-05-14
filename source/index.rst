@@ -28,8 +28,8 @@ Contents:
    characters
    staff
    studio
+   reviews
    forum
-   markdown
 
 
 
