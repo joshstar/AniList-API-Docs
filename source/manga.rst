@@ -30,8 +30,16 @@ Manga
 		"total_chapters": 162,
 		"total_volumes": 18,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
-		"role": null
+		"role": null,
+		"list_stats": {
+			"plan_to_read": 1673,
+			"reading": 421,
+			"completed": 4855,
+			"on_hold": 511,
+			"dropped": 114
+		}
 	}
 
 **Small Manga Model**
@@ -50,6 +58,7 @@ Manga
 		"total_chapters": 95,
 		"total_volumes": 14,
 		"adult": false,
+		"popularity": 7574,
 		"relation_type": null,
 		"role": null
 	}
@@ -94,45 +103,33 @@ Returns anime model with the following:
 	Small model characters (ordered by main role)
 	Small model staff
 
+
 ==================================
 Browse
 ==================================
-Returns up to 30 small manga models.
+Returns up to 40 small manga models.
 
-Pagination
+Browse
 ::
-	URL Param: ?page=1
+	Get: browse/manga
 
-Recently added manga
-::
-	GET: manga/browse/recent
+	Url Parms:
+	year           : 4 digit year e.g. "2014"
+	type           : "Manga" ||  "Novel" ||  "Manhua" ||  "Manhwa" ||  "One" ||  "Doujin"
+	status         : "Not Yet Published" || "Currently Publishing" || "Finished" || "Cancelled"
+	genres         : Comma separated genre strings. e.g. "Action,Comedy" Returns manga that have ALL the genres.
+	genres_exclude : Comma separated genre strings. e.g. "Drama" Excludes returning manga that have ANY of the genres.
+	sort           : "id" || "score" || "popularity" || "start date" || "end date" Sorts results, default ascending order. Append "-desc" for descending order e.g. "id-desc"
+	page           : int
 
-Currently publishing manga
-::
-	GET: manga/browse/publishing
 
-Not yet published manga
+Genre List
 ::
-	GET: manga/browse/upcoming
+	GET: genre_list
 
-Manga by year
-::
-	GET: manga/browse/year/{year}
+List of genres for use with browse queries
 
-Year
-::
-	4 digit year. e.g. 2014
-Season
-::
-	"winter"
-	"spring"
-	"summer"
-	"fall"
-	"autumn"
-
-Pagination
-::
-	URL Param: ?page=1
+*The old browse API endpoints will continue to be supported until the next major API version update*
 
 
 ==================================

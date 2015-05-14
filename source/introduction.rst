@@ -16,6 +16,13 @@ Introduction
     just drop me an email joshstar [a-t] mail [do-t] com and I'll get back to you eventually.
     With the current usage of the API it's rather unlikely any kind of profit cut etc will be necessary.
 
+**Naming Guidelines**
+    Applications or services that utilizes the AniList API must adhere to our naming guidelines (case insensitive):
+    
+    - If "AniList" or "AniChart" are used in the title/name of the application you must clearly state they are an unofficial app by appending either "UNOFFICIAL" or "for AniList"/"for AniChart" to the title/name of the application.
+    - Just the title/name "AniList" and "AniChart" are strictly NOT permitted.
+
+
 **Adult content and application stores**
     We feel we should mention many app-stores like the Apple app store prohibit 18+ content.
     If you're thinking about providing your client via a third-party service you should check their official state on the matter.
@@ -23,7 +30,7 @@ Introduction
     or that our definition of 'adult' content meets the same standards of other services.
     Specifically 'Ecchi' shows are not included in the 'adult' boolean, which is known to have caused issues with Google Adsense and the Apple app-store in the past.
 
-    We can also not ensure the data provided by our user's always be non-adult, (primarly activity and forum data) however we do try to remove this data as soon as possible.
+    We can also not ensure the data provided by our user's always be non-adult, (primarily activity and forum data) however we do try to remove this data as soon as possible.
 
     We recommend you do additional checks and limit the data shown on your client if necessary, to comply with the standards of any service you may be using.
 
