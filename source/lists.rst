@@ -1,22 +1,6 @@
 User Lists
 ==================================
 
-**List score type**
-::
-	0. 10 Point (0-10 int)
-	1. 100 Point (0-100 int)
-	2. 5 Star (0-5 int)
-	3. 3 Smiles (":(",":|",":)" String)
-	4. 10 Point decimal (0.0 - 10.0 Float)
-
-* The AniList API will automatically convert and output the correct score format for the user's type.
-* String score types with the score value 0 will output "-".
-
-**List score order**
-::
-	0. Score
-	1. Alphabetical
-
 ==================================
 Animelist
 ==================================
@@ -45,7 +29,8 @@ Payload
 ::
 	id: (int) anime_id of list item
 	list_status: (String) "watching" || "completed" || "on-hold" || "dropped" || "plan to watch"
-	score: (See top of page - List score types)
+	score: (See bottom of page - List score types)
+	score_raw: (int) 0-100 (See bottom of page - Raw score)
 	episodes_watched: (int)
 	rewatched: (int)
 	notes: (String)
@@ -82,7 +67,8 @@ Payload
 ::
 	id: (int) manga_id of list item
 	list_status: (String) "reading" || "completed" || "on-hold" || "dropped" || "plan to read"
-	score: (See top of page - List score types)
+	score: (See bottom of page - List score types)
+	score_raw: (int) 0-100 (See bottom of page - Raw score)
 	volumes_read: (int)
 	chapters_read: (int)
 	reread: (int)
@@ -103,3 +89,47 @@ Anime list
 Manga list
 ::
 	DELETE: mangalist/{manga_id}
+
+==================================
+List Scores
+==================================
+
+**List score type**
+::
+	0. 10 Point (0-10 int)
+	1. 100 Point (0-100 int)
+	2. 5 Star (0-5 int)
+	3. 3 Smiles (":(",":|",":)" String)
+	4. 10 Point decimal (0.0 - 10.0 Float)
+
+* The AniList API will automatically convert and output the correct score format for the user's type.
+* String score types with the score value 0 will output "-".
+
+**Score Raw**
+
+If you are using a type-safe language the multiple return types of the usual list score can be a pain to work with, so you'll want to use score_raw instead.
+
+Score raw will return the unformatted 0-100 int of the users score, this will need to be formatting on your client into the correct score type for the current user.
+
+Score Raw breakpoints:
+
+5 Star
+::
+	1 : 1-29
+	2 : 30-49
+	3 : 50-69
+	4 : 70-89
+	5 : 90-100
+
+Smiley
+::
+	:( : 1-30
+	:| : 31-60
+	:) : 61-100
+
+* When converting to a lower score format, ensure to always floor (round down) the scores down to the nearest breakpoint. Do not just round them.
+
+**List score order**
+::
+	0. Score
+	1. Alphabetical
