@@ -39,7 +39,7 @@ Introduction
 Creating a client
 ==================================
 
-Log into your AniList account (or create one if you haven't already) and go to `/developer <http://anilist.co/developer>`_. Click the plus in the top right and enter your client's information, once saved you will receive your client id and secret.
+Log into your AniList account (or create one if you haven't already) and go to `the developer settings <https://anilist.co/settings/developer>`_. Click 'Create New Client' and enter your client's information, once saved you will receive your client id and secret.
 
 
 ==================================
