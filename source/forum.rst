@@ -133,7 +133,7 @@ Returns threads the user has subscribed to, ordered by most recent activity or c
    GET: forum/tag
 
    Url Params:
-       tag   : Comma separated tag ids
+       tags  : Comma separated tag ids
        anime : Comma separated anime ids
        manga : Comma separated manga ids
        page : page number
