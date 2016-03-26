@@ -1,6 +1,8 @@
 Authentication
 ==================================
 
+The AniList API implements OAuth 2 authentication, supporting grant types: client credentials, authorization code, and a twitter-like authorization pin.
+
 ==================================
 Which Grant type to use?
 ==================================
