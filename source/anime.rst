@@ -2,7 +2,7 @@ Anime
 ==================================
 
 **Title languages**
-	To make supporting the user *title_language* option easier, if the english or japanese titles are not available their values will be replaced the the standard romaji title.
+	To make supporting the user *title_language* option easier, if the english or japanese titles are not available their values will be replaced by the standard romaji title.
 
 **Anime Model**
 ::
