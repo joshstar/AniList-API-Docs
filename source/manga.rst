@@ -116,7 +116,7 @@ Browse
 	Url Parms:
 	year           : 4 digit year e.g. "2014"
 	type           : "Manga" ||  "Novel" ||  "Manhua" ||  "Manhwa" ||  "One" ||  "Doujin"
-	status         : "Not Yet Published" || "Currently Publishing" || "Finished" || "Cancelled"
+	status         : "Not Yet Published" || "publishing" || "Finished" || "Cancelled"
 	genres         : Comma separated genre strings. e.g. "Action,Comedy" Returns manga that have ALL the genres.
 	genres_exclude : Comma separated genre strings. e.g. "Drama" Excludes returning manga that have ANY of the genres.
 	sort           : "id" || "score" || "popularity" || "start date" || "end date" Sorts results, default ascending order. Append "-desc" for descending order e.g. "id-desc"
