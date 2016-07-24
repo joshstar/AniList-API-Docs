@@ -11,11 +11,13 @@ If you only require reading of AniList data, then use *client credentials* grant
 
 If you want to save, edit or remove (POST, PUT, DELETE) any AniList user (resource owner) data then you'll need to use the *authorization code* or *authorization pin* grant type.
 
-The *authorization code* and *authorization pin* grant types are very similar. The only main difference being the *authorization code* grant will redirect the user to a redirect uri with the authorization code,
-while the *authorization pin* grant will display a pin that the user must copy and paste into the client.
+While the *client credentials* grant type grants read-only access to Anilist data, not all read-only endpoints (GET requests) are available to it. This is because this grant type cannot be associated to a specific user. an example of unavailable endpoint is `GET /user`, which is used to return the information about the user making the request. You also won't be able to get information about *following* and *followed by* users. It's not possible to get Favorites and Airing anime (anime that is currently airing *and* is being watched by the user). In general, any API that would require an authenticated user, cannot be be called with this grant type.
+
+The *authorization code* and *authorization pin* grant types are very similar. The main difference lies in how the API will provide an authentication code to the user. The *authorization code* grant will redirect the user to a redirect uri with the authorization code, while the *authorization pin* grant will display a pin that the user must copy and paste into the client.
+
+There's also some differences in terms of what APIs are available for what grant types. *Authorization pin* is more limited than *authorization code*. If you need access to Notifications, you **must** use the *authorization code* grant
 
 Both the current grant types have a client secret key, you are required to keep this **private**.
-
 
 ==================================
 Grant: Authorization Code
