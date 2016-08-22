@@ -23,8 +23,7 @@ Contents:
    authentication
    user
    lists
-   anime
-   manga
+   series
    characters
    staff
    studio
