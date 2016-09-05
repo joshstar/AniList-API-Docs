@@ -12,7 +12,6 @@ Characters
 		"name_japanese": "スパイク・スピーゲル",
 		"image_url_lge": "http://anilist.co/img/dir/character/reg/1.jpg",
 		"image_url_med": "http://anilist.co/img/dir/character/med/1.jpg",
-		"id_actor": null,
 		"role": null
 	}
 
@@ -25,7 +24,6 @@ Characters
 		"name_last": "Spiegel",
 		"image_url_lge": "http://anilist.co/img/dir/character/reg/1.jpg",
 		"image_url_med": "http://anilist.co/img/dir/character/med/1.jpg",
-		"id_actor": null,
 		"role": "Main",
 	}
 
