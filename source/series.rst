@@ -70,7 +70,7 @@ Anime model only values
 +=================+==============+================================+=====================================================+================+
 | total_episodes  | int          | 12                             | Number of episodes in series season. (0 if unknown) | Yes            |
 +-----------------+--------------+--------------------------------+-----------------------------------------------------+----------------+
-| duration        | int|null     | 24                             | Minuets in the average anime episode.               | No             |
+| duration        | int|null     | 24                             | Minutes in the average anime episode.               | No             |
 +-----------------+--------------+--------------------------------+-----------------------------------------------------+----------------+
 | airing_status   | string|null  | (See anime status types below) | Current airing status of the anime.                 | Yes            |
 +-----------------+--------------+--------------------------------+-----------------------------------------------------+----------------+
@@ -140,7 +140,7 @@ Status Types
 +---------------------+
 | currently airing    |
 +---------------------+
-| not yet aried       |
+| not yet aired       |
 +---------------------+
 | cancelled           |
 +---------------------+
@@ -180,7 +180,9 @@ Anime Source Types
 ==================================
 Fuzzy Dates
 ==================================
-ToDo
+8 digit long integer representing YYYYMMDD
+::
+   20070215 Represents 2007 February 15
 
 ==================================
 Deprecated Dates
@@ -195,12 +197,33 @@ ToDo
 ==================================
 List Stats
 ==================================
-ToDo
+E.g.
+::
+    "list_stats": {
+      "completed": 326,
+      "on_hold": 2071,
+      "dropped": 2158,
+      "plan_to_watch": 446,
+      "watching": 5758
+    }
 
 ==================================
 Score Distribution
 ==================================
-ToDo
+0 - 100 distribution object
+::
+    "score_distribution": {
+      "10": 111,
+      "20": 65,
+      "30": 145,
+      "40": 229,
+      "50": 421,
+      "60": 642,
+      "70": 1193,
+      "80": 1396,
+      "90": 1191,
+      "100": 1016
+    }
 
 
 ==================================
