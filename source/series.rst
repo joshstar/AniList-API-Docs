@@ -300,8 +300,8 @@ Browse
 	genres         : Comma separated genre strings. e.g. "Action,Comedy" Returns series that have ALL the genres.
 	genres_exclude : Comma separated genre strings. e.g. "Drama" Excludes series that have ANY of the genres.
 	sort           : "id" || "score" || "popularity" || "start_date" || "end_date" Sorts results, default ascending order. Append "-desc" for descending order e.g. "id-desc"
-	airing_data    : "airing_data=true" Includes anime airing data in small models
-	full_page      : "full_page=true" Returns all available results. Ignores pages. Only available when status="Currently Airing" or season is included
+	airing_data    : "true" Includes anime airing data in small models
+	full_page      : "true" Returns all available results. Ignores pages. Only available when status="Currently Airing" or season is included
 	page           : int
 
 
