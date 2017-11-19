@@ -6,7 +6,7 @@
 AniList API documentation
 ============================================
 
-API V1 IS SOON TO BE DEPRECATED - `USE API V2 INSTEAD`_
+API V1 IS NOW DEPRECATED AND WILL SHUTDOWN MAY 1ST 2018 - `USE API V2 INSTEAD`_
 ============================================
 
 Welcome to the `AniList.co`_ JSON API documentation.
